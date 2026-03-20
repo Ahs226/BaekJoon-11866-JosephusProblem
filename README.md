@@ -60,6 +60,7 @@ Therefore, I suggest another way.
 
 ### SORCE CODE
 
+#### Important Point
 ```js
 while (scanQueue.size != 0) {
 		if ((index % k) == k-1 ) {
@@ -71,4 +72,165 @@ while (scanQueue.size != 0) {
 		index++;
 	}
 	
+```
+
+### Full code
+```js
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h> 
+
+#define MaxQueueSize 20000
+
+struct Queue {
+	int data[MaxQueueSize];
+	int front;
+	int back;
+	int size;
+};
+//no error
+void InitQueue(struct Queue* queue) {
+	queue->front = 0;
+	queue->back = 0;
+	queue->size = 0;
+}
+
+int Push(struct Queue* queue, int x) {
+	if (x == -1) {
+		return 0;
+	}
+	queue->data[queue->back++ % MaxQueueSize] = x;
+	queue->size++;
+	return 0;
+}
+//no error
+void FillQueue(struct Queue* queue, int n) {
+	for (int i = 1; i <= n; i++) {
+		Push(queue, i);
+	}
+}
+
+int Pop(struct Queue* queue) {
+	int x;
+	if (queue->size == 0) {
+		return -1;
+	}
+	else {
+		x = queue->data[queue->front++ % MaxQueueSize];
+		queue->size--;
+		return x;
+	}
+}
+
+int main() {
+	int n;
+	int k;
+	int index = 0;
+
+	scanf("%d %d", &n, &k);
+
+
+	struct Queue scanQueue;
+	struct Queue printQueue;
+
+	InitQueue(&scanQueue);
+	InitQueue(&printQueue);
+
+	FillQueue(&scanQueue, n);
+
+	while (scanQueue.size != 0) {
+		if ((index % k) == k-1 ) {
+			Push(&printQueue, Pop(&scanQueue));
+			index++;
+		#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h> 
+
+#define MaxQueueSize 20000
+
+struct Queue {
+	int data[MaxQueueSize];
+	int front;
+	int back;
+	int size;
+};
+//no error
+void InitQueue(struct Queue* queue) {
+	queue->front = 0;
+	queue->back = 0;
+	queue->size = 0;
+}
+
+int Push(struct Queue* queue, int x) {
+	if (x == -1) {
+		return 0;
+	}
+	queue->data[queue->back++ % MaxQueueSize] = x;
+	queue->size++;
+	return 0;
+}
+//no error
+void FillQueue(struct Queue* queue, int n) {
+	for (int i = 1; i <= n; i++) {
+		Push(queue, i);
+	}
+}
+
+int Pop(struct Queue* queue) {
+	int x;
+	if (queue->size == 0) {
+		return -1;
+	}
+	else {
+		x = queue->data[queue->front++ % MaxQueueSize];
+		queue->size--;
+		return x;
+	}
+}
+
+int main() {
+	int n;
+	int k;
+	int index = 0;
+
+	scanf("%d %d", &n, &k);
+
+
+	struct Queue scanQueue;
+	struct Queue printQueue;
+
+	InitQueue(&scanQueue);
+	InitQueue(&printQueue);
+
+	FillQueue(&scanQueue, n);
+
+	while (scanQueue.size != 0) {
+		if ((index % k) == k-1 ) {
+			Push(&printQueue, Pop(&scanQueue));
+			index++;
+			continue;
+		}
+		Push(&scanQueue, Pop(&scanQueue));
+		index++;
+	}
+	
+	printf("<");
+	for (int i = 0; i < n - 1; i++) {
+		printf("%d, ", Pop(&printQueue));
+	}
+	printf("%d>", Pop(&printQueue));
+
+	return 0;
+}	continue;
+		}
+		Push(&scanQueue, Pop(&scanQueue));
+		index++;
+	}
+	
+	printf("<");
+	for (int i = 0; i < n - 1; i++) {
+		printf("%d, ", Pop(&printQueue));
+	}
+	printf("%d>", Pop(&printQueue));
+
+	return 0;
+}
 ```
