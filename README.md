@@ -19,8 +19,9 @@ Program output is Josephus permutation for variation N and N
 ## Normal solution
 Use a queue, one of the data structures. 
 
+<p allgn="center">
 <img width="70%" src="https://github.com/Ahs226/BaekJoon-11866-JosephusProblem/issues/1#issue-4107642599">
-<\p>
+</p>
 
 If this index is ship of K, Pop data in queue. And shift all element before pop data index to right. Repeat this process to everyone eliminated.
 
