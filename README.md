@@ -47,13 +47,17 @@ Therefore, I suggest another way.
   I don't override function. Functions work that receive only sturct.
 
   #### step1. Pop K-th eliments
+  
+<p allgn="center">
+<img width="1375" height="768" alt="Image" src="https://github.com/user-attachments/assets/89660ca4-93fd-4b83-a2eb-5dce4f4744f8" />
+</p>
 
   #### step2. Pop and Push
     eliments before K-th move back of queue.
   
 <p allgn="center">
 <img width="1375" height="768" alt="Image" src="https://github.com/user-attachments/assets/6c113be3-fd78-4e90-aeb6-ae18e3718bec" />
-  </p>
+</p>
 
     This consequence have low time compliment and simple sorce code.
 
