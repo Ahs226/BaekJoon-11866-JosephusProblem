@@ -25,6 +25,10 @@ Use a queue, one of the data structures.
 
 If this index is ship of K, Pop data in queue. And shift all element before pop data index to right. Repeat this process to everyone eliminated.
 
+<p allgn="center">
+<img width="1376" height="768" alt="Image" src="https://github.com/user-attachments/assets/568f94d7-3dc4-4ca5-9b12-d15a698940f1" />
+</p>
+
 But this process have square of timecomplication.
 
 Therefore, I suggest another way.
