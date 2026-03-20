@@ -25,4 +25,17 @@ But this process have square of timecomplication.
 
 Therefore, I suggest another way.
 
+## ‼️My solution
 
+### Normal solution's problems
+  #### First. A function of pop needs to receive for a variable K.
+    Function of pop needs a variable K for pop k-th data in queue.
+
+  #### Second. A function of push needs to receive for a variable index
+    Function of push need a variable for shift data.
+
+
+### Concept
+  I don't override function. Functions work that receive only sturct.
+
+  
