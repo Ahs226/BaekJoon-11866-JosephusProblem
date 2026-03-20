@@ -59,6 +59,8 @@ Therefore, I suggest another way.
 <img width="1375" height="768" alt="Image" src="https://github.com/user-attachments/assets/6c113be3-fd78-4e90-aeb6-ae18e3718bec" />
 </p>
 
+## ❗This way have time complexity of a linear
+	
     This consequence have low time compliment and simple sorce code.
 
 
