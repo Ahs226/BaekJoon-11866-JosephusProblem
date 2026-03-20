@@ -20,7 +20,7 @@ Program output is Josephus permutation for variation N and N
 Use a queue, one of the data structures. 
 
 <p allgn="center">
-<img width="70%" src="https://github.com/Ahs226/BaekJoon-11866-JosephusProblem/issues/1#issue-4107642599">
+<img width="1376" height="768" alt="Image" src="https://github.com/user-attachments/assets/e3c99b4b-8e3c-4aa0-8b34-6906ccd7f574" />
 </p>
 
 If this index is ship of K, Pop data in queue. And shift all element before pop data index to right. Repeat this process to everyone eliminated.
