@@ -1,70 +1,76 @@
-# BaekJoon-11866-JosephusProblem
-Efficient implementation of JosephusProblem
+# BaekJoon-11866-JosephusProblem                                                                                        Efficient implementation of JosephusProblem                                                                           
+
+  ## Josephus Problem
+  Josephus problem is a sequence in which a group of N people surrounding a circle are eliminated. The sequence is as
+  follows. A group of N people sits around a circular table, and k-th person is removed until everyone is eliminated.
+  The sequence in which the k-th person is removed is called the Josephus permutation. The Josephus problem is the
+  process of finding the Josephus permutation.
 
 
-## Josephus Problem
-Josephus problem is a sequence in which a group of N people surrounding a circle are eliminated. The sequence is as follows. A group of N people sits around a circular table, and k-th person is removed until everyone is eliminated. The sequence in whice the k-th person is removed is called the Josephus permutation. The Josephus problem is the process of finding the Josephus permutation.
+  ## In BaekJoon-11866...
+  Given variables K and N in first line.
+  Program output is Josephus permutation for variables N and K
+
+  ### Example
+    Input : 7 3
+
+    Output: <3, 6, 2, 7, 5, 1, 4>
 
 
-## In BaekJoon-11866...
-Given variations K and N in first line.
-Program output is Josephus permutation for variation N and N
+  ## Normal solution
+  Use a queue, one of the data structures.
 
-### Example
-  Input : 7 3
+  <p allgn="center">
+  <img width="1376" height="768" alt="Image"
+  src="https://github.com/user-attachments/assets/e3c99b4b-8e3c-4aa0-8b34-6906ccd7f574" />
+  </p>
 
-  Output: <3, 6, 2, 7, 5, 1, 4>
+  If this index is a multiple of K, Pop data in queue. And shift all elements before pop data index to right. Repeat
+  this process until everyone is eliminated.
 
+  <p allgn="center">
+  <img width="1376" height="768" alt="Image"
+  src="https://github.com/user-attachments/assets/568f94d7-3dc4-4ca5-9b12-d15a698940f1" />
+  </p>
 
-## Normal solution
-Use a queue, one of the data structures. 
+  But this process has square of time complexity.
 
-<p allgn="center">
-<img width="1376" height="768" alt="Image" src="https://github.com/user-attachments/assets/e3c99b4b-8e3c-4aa0-8b34-6906ccd7f574" />
-</p>
+  Therefore, I suggest another way.
 
-If this index is ship of K, Pop data in queue. And shift all element before pop data index to right. Repeat this process to everyone eliminated.
+  ## ‼ My solution
 
-<p allgn="center">
-<img width="1376" height="768" alt="Image" src="https://github.com/user-attachments/assets/568f94d7-3dc4-4ca5-9b12-d15a698940f1" />
-</p>
+  ### Normal solution's problems
+    #### First. A function of pop needs to receive a variable K.
+      Function of pop needs a variable K for pop k-th data in queue.
 
-But this process have square of timecomplication.
-
-Therefore, I suggest another way.
-
-## ‼️My solution
-
-### Normal solution's problems
-  #### First. A function of pop needs to receive for a variable K.
-    Function of pop needs a variable K for pop k-th data in queue.
-
-  #### Second. A function of push needs to receive for a variable index
-    Function of push need a variable for shift data.
+    #### Second. A function of push needs to receive a variable index
+      The push function needs a variable for shift data.
 
 
-### Concept
-  I don't override function. Functions work that receive only sturct.
+  ### Concept
+    I don't override function. Functions work that receive only a struct.
 
-  #### step1. Pop K-th eliments
-  
-<p allgn="center">
-<img width="1375" height="768" alt="Image" src="https://github.com/user-attachments/assets/89660ca4-93fd-4b83-a2eb-5dce4f4744f8" />
-</p>
+    #### step1. Pop K-th elements
 
-  #### step2. Pop and Push
-    eliments before K-th move back of queue.
-  
-<p allgn="center">
-<img width="1375" height="768" alt="Image" src="https://github.com/user-attachments/assets/6c113be3-fd78-4e90-aeb6-ae18e3718bec" />
-</p>
+  <p allgn="center">
+  <img width="1375" height="768" alt="Image"
+  src="https://github.com/user-attachments/assets/89660ca4-93fd-4b83-a2eb-5dce4f4744f8" />
+  </p>
 
-## ❗This way have time complexity of a linear
-	
-    This consequence have low time compliment and simple sorce code.
+    #### step2. Pop and Push
+      Elements before K-th move to the back of the queue.
+
+  <p allgn="center">
+  <img width="1375" height="768" alt="Image"
+  src="https://github.com/user-attachments/assets/6c113be3-fd78-4e90-aeb6-ae18e3718bec" />
+  </p>
+
+  ## ❗This approach has linear time complexity
+
+      This approach has low time complexity and simple source code.
 
 
-### SORCE CODE
+  ### SOURCE CODE
 
 #### Important Point
 ```js
